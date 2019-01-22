@@ -16,6 +16,8 @@ RUN apt-get install -y libmagickwand-dev
 RUN pecl install imagick-beta
 RUN echo "extension=imagick.so" > /usr/local/etc/php/conf.d/ext-imagick.ini
 
+
+RUN apt-get install -y gnupg2
 RUN curl -sL https://deb.nodesource.com/setup_10.x | bash -
 RUN apt-get install -y nodejs
 RUN npm install -g laravel-echo-server
